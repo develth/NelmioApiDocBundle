@@ -163,6 +163,7 @@ class Configuration implements ConfigurationInterface
                     ->end()
                 ->end()
                 ->arrayNode('parser')
+                    ->canBeUnset(true)
                     ->addDefaultsIfNotSet()
                     ->children()
                         ->scalarNode('validation')->defaultValue('Nelmio\ApiDocBundle\Parser\ValidationParser')->end()
